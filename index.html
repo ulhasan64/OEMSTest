@@ -1,0 +1,54 @@
+<html>
+	
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<h1>Testing Scripts</h1>
+	    <p id="target" style="color:green;"> </p>
+
+
+		<p>
+			Lorem ipsum dolor sit amet, <span> consectetur </span>adipisicing elit. A, laborum, quasi, veniam iusto natus quibusdam voluptate beatae velit ex placeat quis harum ad accusantium. <span>Absar </span>, laborum facilis quasi voluptatem <span>Ahsan</span>.
+		</p>
+
+		<p>
+				Lorem <span>Ahsan</span> ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, enim reiciendis pariatur unde quo cum error dolores ipsam atque rerum omnis quae mollitia fugit deserunt saepe. <span>Absar</span> Fuga, error iste excepturi?<span>Ahsan</span>
+		</p>
+		<div id="target2" style="margin:20px;">
+			
+
+		</div>
+		Type your Title <input type="text" id="textheading" value="Welcome">
+
+		<input type="submit" id="ClickMe">
+<script>
+	
+	var titles = document.getElementsByTagName('span');
+	console.log(titles.length);
+	for (i=0;i< titles.length;i++)
+	{
+
+	
+		document.getElementById('target').innerHTML = document.getElementById('target').innerHTML +  titles[i].innerHTML + " ";
+
+	}
+	
+	
+
+
+	document.getElementById("ClickMe").onclick = function () {
+		document.getElementById('target').setAttribute("align","right");
+
+	    document.getElementById("target2").innerHTML	 ="";
+		var heading = document.createElement('h1');
+		heading.innerHTML =  document.getElementById("textheading").value;
+		document.getElementById('target2').appendChild(heading);
+
+			// body...
+		}
+
+
+</script>
+	</body>
+</html>
